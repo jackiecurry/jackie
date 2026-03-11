@@ -16,7 +16,7 @@ Claude Projects allow you to set persistent instructions that apply to every con
 4. Copy the full contents of `prompts/system-prompt.md` and paste them into the instructions field
 5. Save the project instructions
 6. In the project, click "Add content" → "Files"
-7. Upload all nine files from the `knowledge/` directory:
+7. Upload all ten files from the `knowledge/` directory:
    - `ux-principles.md`
    - `heuristics.md`
    - `ai-ux-considerations.md`
@@ -26,6 +26,7 @@ Claude Projects allow you to set persistent instructions that apply to every con
    - `design-tokens.md`
    - `component-library.md`
    - `polish-and-craft.md`
+   - `ui-engineering.md`
 8. All conversations within this project will operate as Jackie UX Agent with the full knowledge base available
 
 **Advantages:** Persistent across sessions. No need to re-paste the prompt. Knowledge files are retrieved on demand — the agent can pull exact token values, component specs, and CSS patterns without hallucinating values.

@@ -103,7 +103,8 @@ Execution mode. Give it a component, a flow, or a screen to design and it will p
 │   ├── patterns-and-flows.md         ← Cross-industry patterns: onboarding, auth, e-commerce, nav
 │   ├── design-tokens.md              ← Complete CSS token scales: spacing, color, type, shadows
 │   ├── component-library.md          ← Full component specs: buttons, inputs, cards, modals, toasts
-│   └── polish-and-craft.md           ← Advanced visual techniques with copy-paste CSS
+│   ├── polish-and-craft.md           ← Advanced visual techniques with copy-paste CSS
+│   └── ui-engineering.md             ← React/TS, shadcn/ui, CVA, Radix, component architecture
 ├── integrations/
 │   ├── claude-skill.md               ← Claude Project and API setup
 │   ├── custom-gpt.md                 ← OpenAI custom GPT deployment
@@ -123,7 +124,7 @@ Execution mode. Give it a component, a flow, or a screen to design and it will p
 
 1. Create a new Project
 2. Paste `prompts/system-prompt.md` into Project Instructions
-3. Upload all nine files from `/knowledge` as project knowledge files — this is what lets the Builder mode pull exact token values, component specs, and CSS rather than inventing them
+3. Upload all ten files from `/knowledge` as project knowledge files — this is what lets the Builder mode pull exact token values, component specs, and CSS rather than inventing them
 4. Ask it something hard
 
 **API**
