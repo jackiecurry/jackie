@@ -1,4 +1,4 @@
-# iackie
+# jackie
 
 ![Jackie — Claude Skill](jackie-skill.png)
 
