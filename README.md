@@ -140,8 +140,8 @@ Execution mode. Give it a component, a flow, or a screen to design and it will p
 **Quickest start — no setup required**
 
 1. Open [claude.ai](https://claude.ai) and start a new conversation
-2. Copy the full contents of `prompts/system-prompt.md`
-3. Paste it at the start of your conversation as your first message, then immediately follow it with your question
+2. Open `prompts/system-prompt.md` from this repo and copy the full contents
+3. Paste it into the conversation as your first message, add your question on a new line, and send
 4. Ask it something hard
 
 That's it. The core reasoning, all four modes, and the vocabulary rules are active. The knowledge files won't be loaded, so Build Mode will reason from first principles rather than pulling exact token values and component specs — but Strategic, Direct, and Provocative modes work at full strength.
@@ -153,11 +153,15 @@ That's it. The core reasoning, all four modes, and the vocabulary rules are acti
 This is the complete experience. The knowledge files give Build Mode access to exact design tokens, component specs, and copy-paste CSS so it produces real implementation output rather than approximations.
 
 1. Go to [claude.ai](https://claude.ai) and create a new Project
-2. Open Project Settings and paste the full contents of `prompts/system-prompt.md` into the Instructions field
-3. Upload all eleven files from the `/knowledge` folder as project knowledge files
-4. Start a conversation inside that Project
+2. Inside the project, click **Edit project instructions**
+3. Copy the full contents of `prompts/system-prompt.md` and paste them into the instructions field, then save
+4. Click **Add content → Files** and upload all eleven files from the `/knowledge` folder:
+   - `ux-principles.md`, `ux-writing.md`, `heuristics.md`, `ai-ux-considerations.md`
+   - `rad-design-system.md`, `psychology-deep-dive.md`, `patterns-and-flows.md`
+   - `design-tokens.md`, `component-library.md`, `polish-and-craft.md`, `ui-engineering.md`
+5. Start a conversation inside the project
 
-Once set up, every conversation in the Project has Jackie active by default — no pasting required.
+Once set up, every conversation in the project has Jackie active by default — no pasting required.
 
 ---
 
@@ -169,18 +173,20 @@ import anthropic
 with open("prompts/system-prompt.md", "r") as f:
     system_prompt = f.read()
 
-client = anthropic.Anthropic()
+client = anthropic.Anthropic(api_key="your-api-key")
 
-message = client.messages.create(
+response = client.messages.create(
     model="claude-opus-4-6",
     max_tokens=4000,  # Build Mode responses can exceed 2500 tokens
     system=system_prompt,
     messages=[
-        {"role": "user", "content": "Give me three alternative approaches to reducing drop-off in enterprise onboarding. Strategic Mode."}
+        {"role": "user", "content": "Use Strategic Mode. Give me three alternative approaches to reducing drop-off in enterprise onboarding."}
     ]
 )
-print(message.content[0].text)
+print(response.content[0].text)
 ```
+
+Set `max_tokens` to at least 4000 — Build Mode responses with full component specs, CSS, and all states regularly exceed 2500 tokens. For Strategic, Direct, and Provocative mode queries where you want to manage cost, 1500 is sufficient.
 
 ---
 
