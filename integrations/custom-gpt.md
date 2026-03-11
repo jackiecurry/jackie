@@ -1,5 +1,7 @@
 # Custom GPT Integration Guide
 
+> **Note:** Jackie UX Agent is designed for Claude. This guide covers Custom GPT deployment, but the experience is degraded — Custom GPTs cannot load the nine knowledge files the same way Claude Projects can, which means Build Mode will produce weaker output. Strategic, Direct, and Provocative modes work reasonably well.
+
 ## Deploying Jackie UX Agent as a Custom GPT
 
 ---

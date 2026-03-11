@@ -12,7 +12,7 @@
 **Brand:** Jackie UX
 **Type:** Unified UX strategy, user psychology, and UI visual craft skill for LLM platforms
 **Primary Platform:** Claude (Anthropic) via Project Instructions or API system prompt
-**Compatible Platforms:** Any LLM that accepts system-level instructions (OpenAI, Gemini, Mistral, open-source models via Ollama, LangChain, etc.)
+**Primary Platform:** Claude (Anthropic) — Claude Projects with the full knowledge base is the intended deployment. Other LLMs that accept system-level instructions can run the system prompt, but without native knowledge file retrieval the output quality degrades, particularly in Build Mode.
 
 ---
 
@@ -170,13 +170,9 @@ Paste `prompts/system-prompt.md` into Claude Project Instructions. This applies 
 
 For API usage, pass the system prompt as the `system` parameter. Claude honors system-level instructions reliably across conversation turns.
 
-### OpenAI Custom GPTs
+### Other LLMs (OpenAI, Gemini, open-source)
 
-Paste the system prompt into the "Instructions" field in the GPT configuration. Upload the `knowledge/` files as knowledge files. See `integrations/custom-gpt.md` for configuration details.
-
-### Open Source Models (via Ollama, LangChain, etc.)
-
-Pass the system prompt in the system role at conversation start. Performance will vary by model capability. Models with strong instruction-following (LLaMA 3, Mistral, Qwen) produce usable results. See `integrations/api-usage.md` for a reference implementation.
+The system prompt can be pasted into any LLM that accepts system-level instructions. Strategic, Direct, and Provocative modes will work reasonably well. Build Mode will produce weaker output — without the nine knowledge files loaded natively, the agent cannot retrieve exact token values, component specs, or CSS and will reason from first principles instead. See `integrations/custom-gpt.md` for a Custom GPT setup, with its limitations noted.
 
 ---
 

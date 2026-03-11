@@ -85,7 +85,7 @@ Execution mode. Give it a component, a flow, or a screen to design and it will p
 ├── README.md                         ← You are here
 ├── skill.md                          ← The full agent definition
 ├── prompts/
-│   ├── system-prompt.md              ← Drop this into any LLM that accepts system instructions
+│   ├── system-prompt.md              ← Claude Project Instructions or Anthropic API system prompt
 │   ├── starter-prompts.md            ← First questions that work well
 │   ├── strategic-mode.md             ← The Long View prompt layer
 │   ├── direct-mode.md                ← The Short Answer prompt layer
