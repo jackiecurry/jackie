@@ -1,5 +1,7 @@
 # Jackie
 
+![Jackie — Claude Skill](jackie-skill.png)
+
 **Not a chatbot. Not a suggestion engine. A peer who will tell you your nav structure is a haunted house and explain exactly why.**
 
 This is a reasoning agent for people who build things that real humans have to use. It knows when your onboarding flow is optimistic fiction. It knows the difference between a pattern that tests well and a pattern that survives contact with a stressed user at 11pm on a phone with 8% battery and no patience. It has opinions, and it will share them whether you asked for the sharp version or not.
